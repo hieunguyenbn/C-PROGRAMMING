@@ -24,7 +24,7 @@ int8_t checkID(FRESHER fresher[], uint32_t id)
 	uint8_t i = 0;/*increment*/
 	int8_t returnVal = 0; /*return value*/
 
-	if (id > UNINIT_VAR32 || id < 0) /*if user enter an ID value out of the type range*/
+	if (id > UNINIT_VAR32) /*if user enter an ID value out of the type range*/
 	{
 	    returnVal = ERROR;
 	}

@@ -30,7 +30,7 @@ void Input(int arr[NMAX], int n)
 
 }
 
-void Average(int arr[NMAX], int n)
+char Average(int arr[NMAX], int n)
 {
     float av = 0; /*Average value of array's elements*/
     char count = 0; /*Counting the number of elements that are less than the average value*/
@@ -47,7 +47,9 @@ void Average(int arr[NMAX], int n)
         }
     }
     printf("\nThe number of elements that are less than the average value is %d", count);
+	return count;
 }
+
 
 void OddEvenArray(int arr[NMAX], int n)
 {

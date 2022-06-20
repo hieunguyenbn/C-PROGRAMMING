@@ -103,13 +103,18 @@ int main() {
             do {
                     printf("\nEnter fresher's class name (press 0 for class A, press 1 for class B): ");
                     scanf("%d", &classname);
+					if (classname > 1 || classname < 0) {
+						printf("wrong para, input again !\n");
+					}
             } while (classname > 1 || classname < 0);
+			
             do {
                     printf("\nEnter fresher's GPA (from 0 to 100): ");
         	        scanf("%d", &gpa);
             } while (gpa > UNINIT_VAR8 || gpa < 0);
             
-            if (AddStaff(fresherStaff, id, classname, gpa) == e_done)
+            
+			if (AddStaff(fresherStaff, id, classname, gpa) == e_done)
             {
                 printf("\nAdd new staff successfully!\n");
             }
