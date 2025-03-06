@@ -19,8 +19,7 @@ pipeline {
 
         stage('Build the source code') {
           steps {
-            pwd()
-            sh '''cd C-PROGRAMMING/Assignment1/HieuNS1_CP_Ass1_CBasic
+            sh '''cd C-PROGRAMMING_test/Assignment1/HieuNS1_CP_Ass1_CBasic
 gcc -I./ assignment1.c -o helloElon'''
           }
         }
