@@ -19,7 +19,9 @@ pipeline {
         stage('Build the source code') {
           steps {
             sh '''git clone https://github.com/hieunguyenbn/C-PROGRAMMING.git
+
 cd C-PROGRAMMING/Assignment1/HieuNS1_CP_Ass1_CBasic
+
 gcc -I./ assignment1.c -o helloElon'''
           }
         }
