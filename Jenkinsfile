@@ -1,5 +1,10 @@
 pipeline {
-  agent none
+  agent {
+    node {
+      label 'Compiling Embedded C'
+    }
+
+  }
   stages {
     stage('Clean workspace') {
       parallel {
@@ -21,7 +26,7 @@ pipeline {
           steps {
             pwd()
             sh '''cd C-PROGRAMMING/Assignment1/HieuNS1_CP_Ass1_CBasic
-gcc -IC-PROGRAMMING/Assignment1/HieuNS1_CP_Ass1_CBasic assignment1.c -o helloElon'''
+gcc -I./ assignment1.c -o helloElon'''
           }
         }
 
