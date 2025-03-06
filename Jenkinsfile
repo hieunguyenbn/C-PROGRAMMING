@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    node {
-      label 'Compiling Embedded C'
-    }
-
-  }
+  agent any
   stages {
     stage('Clean workspace') {
       parallel {
