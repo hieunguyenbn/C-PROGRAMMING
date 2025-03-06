@@ -12,14 +12,14 @@ pipeline {
         stage('Clone source code') {
           agent any
           steps {
-            git(url: 'https://github.com/hieunguyenbn/C-PROGRAMMING.git', branch: 'master')
             echo 'Cloning the source code'
           }
         }
 
         stage('Build the source code') {
           steps {
-            sh '''cd C-PROGRAMMING_test/Assignment1/HieuNS1_CP_Ass1_CBasic
+            sh '''git clone https://github.com/hieunguyenbn/C-PROGRAMMING.git
+cd C-PROGRAMMING/Assignment1/HieuNS1_CP_Ass1_CBasic
 gcc -I./ assignment1.c -o helloElon'''
           }
         }
