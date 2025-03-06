@@ -27,7 +27,7 @@ void Input(int arr[NMAX], int n);
  *
  * @return <no return>.
  */
-void Average(int arr[NMAX], int n);
+char Average(int arr[NMAX], int n);
 /*!
  * @brief <sort and print out elements of array even number and odd>
  *
